@@ -1,15 +1,15 @@
 Name:           rrd2csv
-Version:        1.1.5
-Release:        1%{?dist}
+Version:        1.2.5
+Release:        3%{?dist}
 Summary:        Tool for converting Xen API RRDs to CSV
 License:        LGPL+linking exception
 Group:          System/Hypervisor
 URL:            https://github.com/xenserver/rrd2csv/
 
-Source0: https://code.citrite.net/rest/archive/latest/projects/XSU/repos/rrd2csv/archive?at=v1.1.5&format=tar.gz&prefix=rrd2csv-1.1.5#/rrd2csv-1.1.5.tar.gz
+Source0: https://code.citrite.net/rest/archive/latest/projects/XSU/repos/rrd2csv/archive?at=v1.2.5&format=tar.gz&prefix=rrd2csv-1.2.5#/rrd2csv-1.2.5.tar.gz
 
 
-Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/rrd2csv/archive?at=v1.1.5&format=tar.gz&prefix=rrd2csv-1.1.5#/rrd2csv-1.1.5.tar.gz) = 2138d38841efa8cf145c6e8a544b2ff1129fe1c9
+Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/rrd2csv/archive?at=v1.2.5&format=tar.gz&prefix=rrd2csv-1.2.5#/rrd2csv-1.2.5.tar.gz) = 21fbead0465b1d6e0346b0d4d63c55ba2731a9eb
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  xs-opam-repo
@@ -38,9 +38,18 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 /opt/xensource/bin/rrd2csv
-/opt/xensource/man/man1/rrd2csv.1.man
+/opt/xensource/man/man1/rrd2csv.1
 
 %changelog
+* Fri Aug 23 2019 Edwin Török <edvin.torok@citrix.com> - 1.2.5-3
+- bump packages after xs-opam update
+
+* Mon May 20 2019 Christian Lindig <christian.lindig@citrix.com> - 1.2.5-1
+- Fix installed manpage path
+
+* Mon May 20 2019 Christian Lindig <christian.lindig@citrix.com> - 1.1.5-2
+- Fix extension of manual path after change in source Makefile
+
 * Tue Dec 04 2018 Christian Lindig <christian.lindig@citrix.com> - 1.1.5-1
 - Moved from jbuilder to dune and deprecated xcp in favour of xapi-idl.
 
