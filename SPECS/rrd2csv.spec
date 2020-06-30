@@ -1,6 +1,6 @@
 Name:           rrd2csv
 Version:        1.2.5
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Tool for converting Xen API RRDs to CSV
 License:        LGPL+linking exception
 Group:          System/Hypervisor
