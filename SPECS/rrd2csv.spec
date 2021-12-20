@@ -1,6 +1,6 @@
 Name:           rrd2csv
 Version:        1.2.5
-Release:        4%{?dist}
+Release:        7%{?dist}
 Summary:        Tool for converting Xen API RRDs to CSV
 License:        LGPL+linking exception
 Group:          System/Hypervisor
@@ -41,6 +41,15 @@ rm -rf %{buildroot}
 /opt/xensource/man/man1/rrd2csv.1
 
 %changelog
+* Mon Sep 27 2021 Pau Ruiz Safont <pau.safont@citrix.com> - 1.2.5-7
+- Bump package after xs-opam update
+
+* Mon Sep 27 2021 Pau Ruiz Safont <pau.safont@citrix.com> - 1.2.5-6
+- Bump packages after ocaml-xen-api-libs-transitional update
+
+* Tue Jul 13 2021 Edwin Török <edvin.torok@citrix.com> - 1.2.5-5
+- bump packages after xs-opam update
+
 * Fri Aug 23 2019 Edwin Török <edvin.torok@citrix.com> - 1.2.5-3
 - bump packages after xs-opam update
 
