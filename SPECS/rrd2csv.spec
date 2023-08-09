@@ -1,16 +1,13 @@
+%global package_speccommit d1be4438019dcccbc0857da6621b8784c6763e3b
+%global package_srccommit v1.2.6
 Name:           rrd2csv
-Version:        1.2.5
-Release:        7%{?dist}
+Version: 1.2.6
+Release: 7%{?xsrel}%{?dist}
 Summary:        Tool for converting Xen API RRDs to CSV
-License:        LGPL+linking exception
+License:        LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception
 Group:          System/Hypervisor
 URL:            https://github.com/xenserver/rrd2csv/
-
-Source0: https://code.citrite.net/rest/archive/latest/projects/XSU/repos/rrd2csv/archive?at=v1.2.5&format=tar.gz&prefix=rrd2csv-1.2.5#/rrd2csv-1.2.5.tar.gz
-
-
-Provides: gitsha(https://code.citrite.net/rest/archive/latest/projects/XSU/repos/rrd2csv/archive?at=v1.2.5&format=tar.gz&prefix=rrd2csv-1.2.5#/rrd2csv-1.2.5.tar.gz) = 21fbead0465b1d6e0346b0d4d63c55ba2731a9eb
-
+Source0: rrd2csv-1.2.6.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 BuildRequires:  xs-opam-repo
 BuildRequires:  xapi-client-devel
@@ -41,6 +38,27 @@ rm -rf %{buildroot}
 /opt/xensource/man/man1/rrd2csv.1
 
 %changelog
+* Thu Jul 20 2023 Rob Hoes <rob.hoes@citrix.com> - 1.2.6-7
+- Bump release and rebuild
+
+* Mon Jun 19 2023 Christian Lindig <christian.lindig@citrix.com> - 1.2.6-6
+- Bump release and rebuild
+
+* Thu Jun 08 2023 Christian Lindig <christian.lindig@citrix.com> - 1.2.6-5
+- Bump release and rebuild
+
+* Fri May 12 2023 Christian Lindig <christian.lindig@citrix.com> - 1.2.6-4
+- Bump release and rebuild
+
+* Fri May 12 2023 Christian Lindig <christian.lindig@citrix.com> - 1.2.6-3
+- Bump release and rebuild
+
+* Tue Feb 28 2023 Pau Ruiz Safont <pau.ruizsafont@cloud.com> - 1.2.6-2
+- Change license to match the one in the source repo
+
+* Mon Feb 20 2023 Pau Ruiz Safont <pau.ruizsafont@cloud.com> - 1.2.6-1
+- Same as 1.2.5, koji tooling needed an annotated tag to build
+
 * Mon Sep 27 2021 Pau Ruiz Safont <pau.safont@citrix.com> - 1.2.5-7
 - Bump package after xs-opam update
 
