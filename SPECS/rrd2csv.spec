@@ -1,8 +1,8 @@
-%global package_speccommit 35dad1a75777581e1f73de4e2005d8fb71275cd3
+%global package_speccommit c42ab7432338e13ccac61fe25f50848a746f3ea7
 %global package_srccommit v1.2.6
 Name:           rrd2csv
 Version: 1.2.6
-Release: 8.1%{?xsrel}%{?dist}
+Release: 15.1%{?xsrel}%{?dist}
 Summary:        Tool for converting Xen API RRDs to CSV
 License:        LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception
 Group:          System/Hypervisor
@@ -38,6 +38,25 @@ rm -rf %{buildroot}
 /opt/xensource/man/man1/rrd2csv.1
 
 %changelog
+* Tue Jun 04 2024 Gael Duperrey <gduperrey@vates.tech> - 1.2.6-15.1
+- Rebuild after sync with hotfix XS82ECU1064
+- No source changes: only rebuild for dependencies
+- *** Upstream changelog ***
+- * Fri Mar 08 2024 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-15
+- - Bump release and rebuild
+- * Wed Mar 06 2024 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-14
+- - Bump release and rebuild
+- * Tue Mar 05 2024 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-13
+- - Bump release and rebuild
+- * Fri Nov 03 2023 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-12
+- - Bump release and rebuild
+- * Tue Oct 24 2023 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-11
+- - Bump release and rebuild
+- * Tue Oct 24 2023 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-10
+- - Bump release and rebuild
+- * Wed Oct 18 2023 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-9
+- - Bump release and rebuild
+
 * Fri Oct 13 2023 Samuel Verschelde <stormi-xcp@ylix.fr> - 1.2.6-8.1
 - Rebuild after sync with hotfix XS82ECU1049
 - No source changes: only rebuild for dependencies
