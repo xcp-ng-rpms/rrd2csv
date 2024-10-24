@@ -1,8 +1,8 @@
-%global package_speccommit c42ab7432338e13ccac61fe25f50848a746f3ea7
+%global package_speccommit f158068f87848be68b5dfc5c4a23daff026a92d1
 %global package_srccommit v1.2.6
 Name:           rrd2csv
 Version: 1.2.6
-Release: 15.1%{?xsrel}%{?dist}
+Release: 17.1%{?xsrel}%{?dist}
 Summary:        Tool for converting Xen API RRDs to CSV
 License:        LGPL-2.1-or-later WITH OCaml-LGPL-linking-exception
 Group:          System/Hypervisor
@@ -38,6 +38,15 @@ rm -rf %{buildroot}
 /opt/xensource/man/man1/rrd2csv.1
 
 %changelog
+* Thu Oct 24 2024 Gael Duperrey <gduperrey@vates.tech> - 1.2.6-17.1
+- Rebuild after sync with hotfix XS82ECU1074
+- No source changes: only rebuild for dependencies
+- *** Upstream changelog ***
+- * Thu Aug 29 2024 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-17
+- - Bump release and rebuild
+- * Wed Jun 19 2024 Christian Lindig <christian.lindig@cloud.com> - 1.2.6-16
+- - Bump release and rebuild
+
 * Tue Jun 04 2024 Gael Duperrey <gduperrey@vates.tech> - 1.2.6-15.1
 - Rebuild after sync with hotfix XS82ECU1064
 - No source changes: only rebuild for dependencies
